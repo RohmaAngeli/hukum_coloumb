@@ -1,7 +1,7 @@
 //double click tombol proses
 procedure TForm1.BitBtn1Click(Sender: TObject);
-	var q1,q2:Integer;
-	    F,r,k1:Real;
+var q1,q2:Integer;
+	F,r,k1:Real;
 	const k=9000000000;
 begin
 	q1:=StrToInt(Edit1.Text);
@@ -11,23 +11,23 @@ begin
 	Listbox1.Clear;
 	Series1.Clear;
 	Listbox1.Items.Add('-------------------------------------------');
-	Listbox1.Items.Add('  r (m)     F x 9.10^9 (N)');
+	Listbox1.Items.Add(' r (m) F x 9.10^9 (N)');
 	Listbox1.Items.Add('-------------------------------------------');
 	while r < 10 do
-		begin
-		 F:=abs((k1*q1*q2)/sqr(r));
-		 r:=r+0.05;
-	 	 with Chart1 do
-	 		with Series1 do
-	 		 addxy(r,F);
-		 Listbox1.Items.Add(' '+FormatFloat('0.###',r)+' '+FormatFloat('0.###',F));
-		end;
-if q1*q2 > 0 then
- Label1.Caption:='Sifat Gaya Coulomb: Tolak menolak'
- 	else if q1*q2= 0 then
-	 Label1.Caption:='Sifat Gaya Coulomb: Gaya = 0'
-		 else Label1.Caption:='Sifat Gaya Coulomb: Tarik menarik';
-end;
+        begin
+            F:=abs((k1*q1*q2)/sqr(r));
+            r:=r+0.05;
+            with Chart1 do
+                with Series1 do
+                addxy(r,F);
+            Listbox1.Items.Add(' '+FormatFloat('0.###',r)+' '+FormatFloat('0.###',F));
+            end;
+    if q1*q2 > 0 then
+    Label1.Caption:='Sifat Gaya Coulomb: Tolak menolak'
+        else if q1*q2= 0 then
+        Label1.Caption:='Sifat Gaya Coulomb: Gaya = 0'
+            else Label1.Caption:='Sifat Gaya Coulomb: Tarik menarik';
+    end;
 
 //double click tombol reset
 procedure TForm1.BitBtn2Click(Sender: TObject);
