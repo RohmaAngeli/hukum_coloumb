@@ -1,7 +1,7 @@
 //double click tombol proses
 procedure TForm1.BitBtn1Click(Sender: TObject);
 	var q1,q2:Integer;
-	 		F,r,k1:Real;
+	    F,r,k1:Real;
 	const k=9000000000;
 begin
 	q1:=StrToInt(Edit1.Text);
