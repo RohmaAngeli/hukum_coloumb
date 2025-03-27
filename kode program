@@ -11,10 +11,10 @@ begin
 	Listbox1.Clear;
 	Series1.Clear;
 	Listbox1.Items.Add('-------------------------------------------');
-	Listbox1.Items.Add(' r (m) F x 9.10^9 (N)');
+	Listbox1.Items.Add('  r (m)     F x 9.10^9 (N)');
 	Listbox1.Items.Add('-------------------------------------------');
 	while r < 10 do
-	 begin
+		begin
 		 F:=abs((k1*q1*q2)/sqr(r));
 		 r:=r+0.05;
 	 	 with Chart1 do
